@@ -10,7 +10,6 @@ class Task:
 
     def complete(self):
         self.completed = True
-        print(f'Task {self.title} completed.')
 
 
 class User:
@@ -21,12 +20,10 @@ class User:
 
     def add_task(self, task):
         self.tasks.append(task)
-        print(f'Task {task.title} has been added to {self.name}"s tasks.')
 
 
     def get_task_by_title(self, title):
         for task in self.tasks:
             if title == task.title:
                 return task
-            else:
-                return None
+        return None
