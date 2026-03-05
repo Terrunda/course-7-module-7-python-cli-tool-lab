@@ -30,7 +30,9 @@ def test_complete_task_with_script(tmp_path):
         task = Task("Finish lab")
         user.add_task(task)
         task.complete()
-        print(f"✅ Task '{{task.title}}' completed.")
+        
+        # FIX: Force the output to flush immediately
+        print(f"✅ Task '{{task.title}}' completed.", flush=True)
     """).strip()
 
     script_path.write_text(script_content, encoding='utf-8')

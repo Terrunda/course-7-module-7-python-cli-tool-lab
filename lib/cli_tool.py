@@ -31,7 +31,7 @@ def complete_task(args):
 
 def main():
     parser = argparse.ArgumentParser(description="Task Manager CLI")
-    subparsers = parser.add_subparsers(dest="command") # Added dest for easier debugging
+    subparsers = parser.add_subparsers(dest="command")
 
     add_parser = subparsers.add_parser("add-task", help="Add a new task")
     add_parser.add_argument("user")
